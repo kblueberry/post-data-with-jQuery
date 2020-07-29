@@ -1,0 +1,16 @@
+#main-content {
+  background-color: #faf9f8;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #main-content #contact-form {
+    max-width: 60%;
+    color: #3e434c; }
+    #main-content #contact-form .contact-form__title {
+      font-family: "Raleway";
+      font-size: 24px;
+      text-align: center; }
+    #main-content #contact-form .contact-form__description {
+      font-family: "Cabin";
+      font-size: 16px;
+      text-align: center; }

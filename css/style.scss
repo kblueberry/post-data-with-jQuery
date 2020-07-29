@@ -1,2 +1,32 @@
-$font-sizes: (title: 24px, description: 16px);
+$title-font-size: 24px;
+$description-font-size: 16px;
 
+$background-color: #faf9f8;
+$text-color: #3e434c;
+
+$title-font-family: 'Raleway';
+$description-font-family: 'Cabin';
+
+#main-content {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #contact-form {
+    max-width: 60%;
+    color: $text-color;
+
+    .contact-form__title {
+      font-family: $title-font-family;
+      font-size: $title-font-size;
+      text-align: center;
+    }
+
+    .contact-form__description {
+      font-family: $description-font-family;
+      font-size: $description-font-size;
+      text-align: center;
+    }
+  }
+}
