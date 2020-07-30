@@ -25,11 +25,12 @@ body {
       font-family: "Cabin";
       font-size: 16px;
       line-height: 24px; }
+  .contact-form #main-content {
+    width: 60%; }
   .contact-form .contact-form__body {
     background: #ffffff;
     border: 1px solid #ecedef;
-    position: relative;
-    width: 60%; }
+    position: relative; }
     .contact-form .contact-form__body .contact-form__body__badge {
       display: flex;
       justify-content: center;
@@ -133,8 +134,9 @@ body {
       display: none; }
 
 .actions {
+  margin: 2em 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; }
   .actions .actions__button {
     display: flex;

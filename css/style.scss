@@ -70,13 +70,6 @@ $padding: 0.4em 0.8em;
   margin: 0 0.4em 0 0;
 }
 
-// @mixin action-button-style {
-//   border-width: 2px;
-//   border-style: solid;
-//   @include align-center;
-//   border-radius: 4px;
-// }
-
 body {
   background-color: $body-background-color;
   color: $text-color;
@@ -104,11 +97,14 @@ body {
     }
   }
 
+  #main-content {
+    width: 60%;
+  }
+
   .contact-form__body {
     background: $white-primary-color;
     border: 1px solid $grey-primary-color;
     position: relative;
-    width: 60%;
 
     .contact-form__body__badge {
       @include align-center;
@@ -226,7 +222,10 @@ body {
 }
 
 .actions {
-  @include align-center();
+  margin: 2em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .actions__button {
     @include align-center;
