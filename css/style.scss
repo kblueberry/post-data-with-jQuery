@@ -3,16 +3,20 @@ $description-font-size: 16px;
 
 $background-color: #faf9f8;
 $text-color: #3e434c;
-$white-background-color: #ffffff;
+$white-primary-color: #ffffff;
 $input-border: #f1f2f3;
 $input-focus-border: #adc5dd;
-$form-border-color: #ecedef;
+$grey-primary-color: #ecedef;
+$grey-secondary-color: #79879b;
+$grey-minor-color: #f0f0f0;
 
-$title-font-family: 'Raleway';
-$description-font-family: 'Cabin';
+$secondary-font-family: 'Raleway';
+$primary-font-family: 'Cabin';
+
+$primary-line-height: 14px;
 
 @mixin input-view {
-  background: $white-background-color;
+  background: $white-primary-color;
   border-width: 2px;
   border-style: solid;
   border-radius: 2px;
@@ -29,25 +33,42 @@ body {
   justify-content: center;
   align-items: center;
 
+  .contact-form__badge {
+    background-color: $grey-minor-color;
+    color: $grey-secondary-color;
+    border: 1px solid $grey-primary-color;
+    border-radius: 5px;
+    padding: 0.2em 0.8em;
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: $primary-line-height;
+
+    .contact-form__badge--all {
+      opacity: 0.7;
+    }
+  }
+
   .contact-form__info {
     max-width: 55%;
 
     .contact-form__info__title {
-      font-family: $title-font-family;
+      font-family: $secondary-font-family;
       font-size: $title-font-size;
       text-align: center;
     }
 
     .contact-form__info__description {
       text-align: center;
-      font-family: $description-font-family;
+      font-family: $primary-font-family;
       font-size: $description-font-size;
     }
   }
 
   .contact-form__body {
-    background: $white-background-color;
-    border: 1px solid $form-border-color;
+    background: $white-primary-color;
+    border: 1px solid $grey-primary-color;
 
     .contact-form__body__row {
       display: flex;
