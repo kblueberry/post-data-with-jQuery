@@ -1,4 +1,4 @@
-$background-color: #faf9f8;
+$body-background-color: #faf9f8;
 $text-color: #3e434c;
 $white-primary-color: #ffffff;
 $input-border: #f1f2f3;
@@ -11,11 +11,14 @@ $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
 
 $line-height-sm: 14px;
-$line-height-lg: 28px;
-$line-height-md: 24px;
+$line-height-extra-lg: 28px;
+$line-height-lg: 24px;
+$line-height-md: 21px;
 
-$title-font-size: 24px;
-$description-font-size: 16px;
+$text-font-extra-lg: 24px;
+$text-font-lg: 18px;
+$text-font-md: 16px;
+$text-font-sm: 14px;
 
 @mixin input-view {
   background: $white-primary-color;
@@ -25,7 +28,7 @@ $description-font-size: 16px;
 }
 
 body {
-  background-color: $background-color;
+  background-color: $body-background-color;
   color: $text-color;
 }
 
@@ -40,16 +43,16 @@ body {
 
     .contact-form__info__title {
       font-family: $secondary-font-family;
-      font-size: $title-font-size;
+      font-size: $text-font-extra-lg;
       text-align: center;
-      line-height: $line-height-lg;
+      line-height: $line-height-extra-lg;
     }
 
     .contact-form__info__description {
       text-align: center;
       font-family: $primary-font-family;
-      font-size: $description-font-size;
-      line-height: $line-height-md;
+      font-size: $text-font-md;
+      line-height: $line-height-lg;
     }
   }
 
@@ -72,11 +75,26 @@ body {
       font-family: $primary-font-family;
       font-style: normal;
       font-weight: bold;
-      font-size: 14px;
+      font-size: $text-font-sm;
       line-height: $line-height-sm;
 
       .contact-form__body__badge--all {
         opacity: 0.7;
+      }
+    }
+
+    .contact-form__body__tooltip {
+      border: none;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $text-font-lg;
+      line-height: $line-height-md;
+      padding: 1em;
+
+      .contact-form__body__tooltip__icon {
+        margin: 0 0.4em 0 0;
       }
     }
 
