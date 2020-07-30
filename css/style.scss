@@ -92,6 +92,7 @@ body {
     background: $white-primary-color;
     border: 1px solid $grey-primary-color;
     position: relative;
+    width: 60%;
 
     .contact-form__body__badge {
       @include align-center;
@@ -136,6 +137,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
 
         .contact-form__body__row__field {
           border: none;
@@ -151,6 +153,7 @@ body {
           .form-field__input {
             border-color: $input-border;
             @include input-view;
+            width: inherit;
           }
 
           .form-field__input:focus {
@@ -166,7 +169,7 @@ body {
       }
 
       .contact-form__body__row--full {
-        width: 94%;
+        width: 96%;
       }
     }
   }

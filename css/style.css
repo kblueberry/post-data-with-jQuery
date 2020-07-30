@@ -28,7 +28,8 @@ body {
   .contact-form .contact-form__body {
     background: #ffffff;
     border: 1px solid #ecedef;
-    position: relative; }
+    position: relative;
+    width: 60%; }
     .contact-form .contact-form__body .contact-form__body__badge {
       display: flex;
       justify-content: center;
@@ -71,7 +72,8 @@ body {
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row {
         display: flex;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        width: 100%; }
         .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field {
           border: none;
           display: flex;
@@ -92,7 +94,8 @@ body {
             border-style: solid;
             border-radius: 2px;
             padding: 0.4em 0.8em;
-            margin: 0.2em 0; }
+            margin: 0.2em 0;
+            width: inherit; }
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__input:focus {
             outline: none;
             border-color: #adc5dd;
@@ -105,4 +108,4 @@ body {
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__answer {
             width: 100%; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row--full {
-        width: 94%; }
+        width: 96%; }
