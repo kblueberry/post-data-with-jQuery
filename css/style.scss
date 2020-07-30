@@ -155,6 +155,7 @@ body {
 
         .contact-form__body__row__field {
           border: none;
+          flex: 1;
           @include align-flex-start;
 
           .form-field__label {
@@ -165,6 +166,8 @@ body {
 
           .form-field__input {
             border-color: $input-border;
+            box-sizing: border-box;
+            width: 100%;
             @include input-view;
           }
 
@@ -172,10 +175,6 @@ body {
             outline: none;
             border-color: $input-focus-border;
             @include input-view;
-          }
-
-          .form-field__answer {
-            // width: 100%;
           }
 
           .form-field__textarea {
@@ -220,10 +219,6 @@ body {
         }
       }
     }
-
-    // .contact-form__body__inputs--hidden {
-    //   display: none;
-    // }
   }
 }
 
@@ -270,5 +265,20 @@ body {
     font-size: $text-font-md;
     font-family: $secondary-font-family;
     line-height: 19px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-form {
+    padding: 0;
+  }
+
+  .contact-form__body__row {
+    flex-wrap: wrap;
+
+    .contact-form__body__row__field {
+      flex: 0 0 100% !important;
+      box-sizing: border-box;
+    }
   }
 }
