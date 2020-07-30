@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url('./fonts/Cabin-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-VariableFont_wght.ttf');
+}
+
 $body-background-color: #faf9f8;
 $text-color: #3e434c;
 $white-primary-color: #ffffff;
@@ -10,21 +20,43 @@ $grey-minor-color: #f0f0f0;
 $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
 
-$line-height-sm: 14px;
-$line-height-extra-lg: 28px;
-$line-height-lg: 24px;
+$line-height-extra-sm: 14px;
+$line-height-sm: 20px;
 $line-height-md: 21px;
+$line-height-lg: 24px;
+$line-height-extra-lg: 28px;
 
-$text-font-extra-lg: 24px;
-$text-font-lg: 18px;
-$text-font-md: 16px;
 $text-font-sm: 14px;
+$text-font-md: 16px;
+$text-font-lg: 18px;
+$text-font-extra-lg: 24px;
 
 @mixin input-view {
   background: $white-primary-color;
   border-width: 2px;
   border-style: solid;
   border-radius: 2px;
+  padding: 0.4em 0.8em;
+  margin: 0.2em 0;
+}
+
+@mixin labels-font-style {
+  font-family: $primary-font-family;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin align-flex-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -33,10 +65,8 @@ body {
 }
 
 .contact-form {
-  display: flex;
+  @include align-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   .contact-form__info {
     max-width: 55%;
@@ -62,62 +92,72 @@ body {
     position: relative;
 
     .contact-form__body__badge {
-      display: inline-block;
+      @include align-center;
       position: absolute;
-      top: -10%;
-      left: 39%;
-      right: 39%;
+      top: -4%;
+      right: 40%;
       background-color: $grey-minor-color;
       color: $grey-secondary-color;
       border: 1px solid $grey-primary-color;
       border-radius: 5px;
       padding: 0.2em 0.8em;
-      font-family: $primary-font-family;
-      font-style: normal;
-      font-weight: bold;
+      @include labels-font-style;
       font-size: $text-font-sm;
-      line-height: $line-height-sm;
+      line-height: $line-height-extra-sm;
 
       .contact-form__body__badge--all {
         opacity: 0.7;
       }
     }
 
-    .contact-form__body__tooltip {
-      border: none;
-      background: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: $text-font-lg;
-      line-height: $line-height-md;
-      padding: 1em;
+    .contact-form__body__inputs {
+      @include align-flex-start;
 
-      .contact-form__body__tooltip__icon {
-        margin: 0 0.4em 0 0;
-      }
-    }
-
-    .contact-form__body__row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .contact-form__body__row__field {
+      .contact-form__body__tooltip {
         border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        background: none;
+        @include align-center;
+        font-family: $secondary-font-family;
+        font-style: normal;
+        font-weight: 600;
+        font-size: $text-font-lg;
+        line-height: $line-height-md;
+        padding: 1em;
 
-        #form-field__label {
-          border-color: $input-border;
-          @include input-view;
+        .contact-form__body__tooltip__icon {
+          margin: 0 0.4em 0 0;
+        }
+      }
+
+      .contact-form__body__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contact-form__body__row__field {
+          border: none;
+          @include align-flex-start;
+
+          .form-field__label {
+            @include labels-font-style;
+            font-size: $text-font-md;
+            line-height: $line-height-sm;
+          }
+
+          .form-field__input {
+            border-color: $input-border;
+            @include input-view;
+          }
+
+          .form-field__input:focus {
+            outline: none;
+            border-color: $input-focus-border;
+            @include input-view;
+          }
         }
 
-        #form-field__label:focus {
-          border-color: $input-focus-border;
-          @include input-view;
+        .contact-form__body__row__field--full-width {
+          max-width: 100%;
         }
       }
     }
