@@ -95,7 +95,7 @@ body {
             border-radius: 2px;
             padding: 0.4em 0.8em;
             margin: 0.2em 0;
-            width: inherit; }
+            width: 100%; }
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__input:focus {
             outline: none;
             border-color: #adc5dd;
@@ -107,5 +107,9 @@ body {
             margin: 0.2em 0; }
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__answer {
             width: 100%; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__textarea {
+            outline: none;
+            resize: none;
+            font-family: "Cabin"; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row--full {
         width: 96%; }
