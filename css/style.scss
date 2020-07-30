@@ -1,6 +1,3 @@
-$title-font-size: 24px;
-$description-font-size: 16px;
-
 $background-color: #faf9f8;
 $text-color: #3e434c;
 $white-primary-color: #ffffff;
@@ -13,7 +10,12 @@ $grey-minor-color: #f0f0f0;
 $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
 
-$primary-line-height: 14px;
+$line-height-sm: 14px;
+$line-height-lg: 28px;
+$line-height-md: 24px;
+
+$title-font-size: 24px;
+$description-font-size: 16px;
 
 @mixin input-view {
   background: $white-primary-color;
@@ -43,7 +45,7 @@ body {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: $primary-line-height;
+    line-height: $line-height-sm;
 
     .contact-form__badge--all {
       opacity: 0.7;
@@ -57,12 +59,14 @@ body {
       font-family: $secondary-font-family;
       font-size: $title-font-size;
       text-align: center;
+      line-height: $line-height-lg;
     }
 
     .contact-form__info__description {
       text-align: center;
       font-family: $primary-font-family;
       font-size: $description-font-size;
+      line-height: $line-height-md;
     }
   }
 

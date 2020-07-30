@@ -25,11 +25,13 @@ body {
     .contact-form .contact-form__info .contact-form__info__title {
       font-family: "Raleway";
       font-size: 24px;
-      text-align: center; }
+      text-align: center;
+      line-height: 28px; }
     .contact-form .contact-form__info .contact-form__info__description {
       text-align: center;
       font-family: "Cabin";
-      font-size: 16px; }
+      font-size: 16px;
+      line-height: 24px; }
   .contact-form .contact-form__body {
     background: #ffffff;
     border: 1px solid #ecedef; }
