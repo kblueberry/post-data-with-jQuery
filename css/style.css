@@ -71,6 +71,8 @@ body {
         padding: 1em; }
         .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__tooltip .contact-form__body__tooltip__icon {
           margin: 0 0.4em 0 0; }
+      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__tooltip:focus {
+        outline: none; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row {
         display: flex;
         justify-content: space-between;

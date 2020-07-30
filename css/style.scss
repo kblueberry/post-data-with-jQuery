@@ -148,6 +148,10 @@ body {
         }
       }
 
+      .contact-form__body__tooltip:focus {
+        outline: none;
+      }
+
       .contact-form__body__row {
         display: flex;
         justify-content: space-between;
