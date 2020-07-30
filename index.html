@@ -1,80 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    ></meta>
+
     <title>Let's play with form</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    ></link>
+
     <script src="js/script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <main class="contact-form">
-      <div class="contact-form__info">
-        <h3 class="contact-form__info__title">Lorem Ipsum</h3>
-        <p class="contact-form__info__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        <div class="contact-form__info">
+            <h3 class="contact-form__info__title">Lorem Ipsum</h3>
+
+            <p class="contact-form__info__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
-      </div>
-      <form
-        class="contact-form__body"
-        action="https://my-json-server.typicode.com"
-        method="post"
-      >
-        <div class="contact-form__body__badge">
-          <span class="contact-form__body__badge--current"></span> Block 1<span
-            class="contact-form__body__badge--all"
-          >
-            /2</span
-          >
+            </p>
         </div>
-        <button class="contact-form__body__tooltip">
-          <img class="contact-form__body__tooltip__icon" src="images/icons/info.svg"></img>
-          Contact info
-        </button>
-        <div class="contact-form__body__row">
-          <fieldset class="contact-form__body__row__field">
-            <label for="form-field__label">Phone</label>
-            <input
-              id="form-field__label"
-              type="tel"
-              name="phone"
-              placeholder="+1 939 283 294"
-            />
-          </fieldset>
-          <fieldset class="contact-form__body__row__field">
-            <label for="form-field__label">Phone</label>
-            <input
-              id="form-field__label"
-              type="text"
-              name="city"
-              placeholder="Your State"
-            />
-          </fieldset>
-        </div>
-        <div class="contact-form__body__row">
-          <fieldset class="contact-form__body__row__field">
-            <label for="form-field__label">My Name</label>
-            <input
-              id="form-field__label"
-              type="text"
-              name="name"
-              placeholder="Your Name"
-            />
-          </fieldset>
-          <fieldset class="contact-form__body__row__field">
-            <label for="form-field__label">My Country</label>
-            <input
-              id="form-field__label"
-              type="text"
-              name="country"
-              placeholder="Your Country"
-            />
-          </fieldset>
-        </div>
-      </form>
+
+        <form
+            class="contact-form__body"
+            action="https://my-json-server.typicode.com"
+            method="post"
+        >
+            <div class="contact-form__body__badge">
+                <span class="contact-form__body__badge--current"></span>
+                Block 1
+
+                <span class="contact-form__body__badge--all">/2</span>
+            </div>
+
+            <div class="contact-form__body__inputs">
+                <button class="contact-form__body__tooltip">
+                    <img
+                        class="contact-form__body__tooltip__icon"
+                        src="images/icons/info.svg"
+                    >
+
+                    Contact info
+                </button>
+
+                <div class="contact-form__body__row">
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >Phone</label>
+
+                        <input
+                            class="form-field__input"
+                            type="tel"
+                            name="phone"
+                            placeholder="+1 939 283 294"
+                        ></input>
+                    </fieldset>
+
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >Phone</label>
+
+                        <input
+                            class="form-field__input"
+                            type="text"
+                            name="city"
+                            placeholder="Your State"
+                        ></input>
+                    </fieldset>
+                </div>
+
+                <div class="contact-form__body__row">
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >My Name</label>
+
+                        <input
+                            class="form-field__input"
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                        ></input>
+                    </fieldset>
+
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >My Country</label>
+
+                        <input
+                            class="form-field__input"
+                            type="text"
+                            name="country"
+                            placeholder="Your Country"
+                        ></input>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="contact-form__body__inputs">
+                <button class="contact-form__body__tooltip">
+                    <img
+                        class="contact-form__body__tooltip__icon"
+                        src="images/icons/info.svg"
+                    >
+
+                    Main questions
+                </button>
+
+                <div class="contact-form__body__row contact-form__body__row--full">
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >
+                            Morbi placerat laoreet turpis ut pharetra?
+                        </label>
+
+                        <input
+                            class="form-field__input form-field__answer"
+                            type="text"
+                            name="answer"
+                            placeholder="Type your answer here"
+                        ></input>
+                    </fieldset>
+                </div>
+
+                <div class="contact-form__body__row contact-form__body__row--full">
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >
+                            Donec efficitur fermentum augue vestibulum gravida?
+                        </label>
+
+                        <input
+                            class="form-field__input form-field__answer"
+                            type="text"
+                            name="answer"
+                            placeholder="Type your answer here"
+                        ></input>
+                    </fieldset>
+                </div>
+
+                <div class="contact-form__body__row contact-form__body__row--full">
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >
+                            Praesent ullamcorper malesuada nunc ac blandit?
+                        </label>
+
+                        <input
+                            class="form-field__input form-field__answer"
+                            type="text"
+                            name="answer"
+                            placeholder="Type your answer here"
+                        ></input>
+                    </fieldset>
+                </div>
+
+                <div class="contact-form__body__row contact-form__body__row--full">
+                    <fieldset class="contact-form__body__row__field">
+                        <label
+                            class="form-field__label"
+                            for="form-field__input"
+                        >
+                            Proin euismod leo eu metus commodo sodales?
+                        </label>
+
+                        <input
+                            class="form-field__input form-field__answer"
+                            type="text"
+                            name="answer"
+                            placeholder="Type your answer here"
+                        ></input>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
     </main>
-  </body>
+</body>
 </html>

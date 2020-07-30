@@ -1,12 +1,18 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url("./fonts/Cabin-Regular.ttf"); }
+@font-face {
+  font-family: 'Raleway';
+  src: url("./fonts/Raleway-VariableFont_wght.ttf"); }
 body {
   background-color: #faf9f8;
   color: #3e434c; }
 
 .contact-form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
   .contact-form .contact-form__info {
     max-width: 55%; }
     .contact-form .contact-form__info .contact-form__info__title {
@@ -24,16 +30,17 @@ body {
     border: 1px solid #ecedef;
     position: relative; }
     .contact-form .contact-form__body .contact-form__body__badge {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      top: -10%;
-      left: 39%;
-      right: 39%;
+      top: -2%;
+      right: 40%;
       background-color: #f0f0f0;
       color: #79879b;
       border: 1px solid #ecedef;
       border-radius: 5px;
-      padding: 0.2em 0.8em;
+      padding: 0.4em 0.8em;
       font-family: "Cabin";
       font-style: normal;
       font-weight: bold;
@@ -41,36 +48,60 @@ body {
       line-height: 14px; }
       .contact-form .contact-form__body .contact-form__body__badge .contact-form__body__badge--all {
         opacity: 0.7; }
-    .contact-form .contact-form__body .contact-form__body__tooltip {
-      border: none;
-      background: none;
+    .contact-form .contact-form__body .contact-form__body__inputs {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      line-height: 21px;
-      padding: 1em; }
-      .contact-form .contact-form__body .contact-form__body__tooltip .contact-form__body__tooltip__icon {
-        margin: 0 0.4em 0 0; }
-    .contact-form .contact-form__body .contact-form__body__row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .contact-form .contact-form__body .contact-form__body__row .contact-form__body__row__field {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__tooltip {
         border: none;
+        background: none;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start; }
-        .contact-form .contact-form__body .contact-form__body__row .contact-form__body__row__field #form-field__label {
-          border-color: #f1f2f3;
-          background: #ffffff;
-          border-width: 2px;
-          border-style: solid;
-          border-radius: 2px; }
-        .contact-form .contact-form__body .contact-form__body__row .contact-form__body__row__field #form-field__label:focus {
-          border-color: #adc5dd;
-          background: #ffffff;
-          border-width: 2px;
-          border-style: solid;
-          border-radius: 2px; }
+        justify-content: center;
+        align-items: center;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 1em; }
+        .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__tooltip .contact-form__body__tooltip__icon {
+          margin: 0 0.4em 0 0; }
+      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field {
+          border: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 100%; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__label {
+            font-family: "Cabin";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__input {
+            border-color: #f1f2f3;
+            background: #ffffff;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 2px;
+            padding: 0.4em 0.8em;
+            margin: 0.2em 0; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__input:focus {
+            outline: none;
+            border-color: #adc5dd;
+            background: #ffffff;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 2px;
+            padding: 0.4em 0.8em;
+            margin: 0.2em 0; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__answer {
+            width: 100%; }
+      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row--full {
+        width: 94%; }

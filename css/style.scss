@@ -31,12 +31,14 @@ $text-font-md: 16px;
 $text-font-lg: 18px;
 $text-font-extra-lg: 24px;
 
+$padding: 0.4em 0.8em;
+
 @mixin input-view {
   background: $white-primary-color;
   border-width: 2px;
   border-style: solid;
   border-radius: 2px;
-  padding: 0.4em 0.8em;
+  padding: $padding;
   margin: 0.2em 0;
 }
 
@@ -94,13 +96,13 @@ body {
     .contact-form__body__badge {
       @include align-center;
       position: absolute;
-      top: -4%;
+      top: -2%;
       right: 40%;
       background-color: $grey-minor-color;
       color: $grey-secondary-color;
       border: 1px solid $grey-primary-color;
       border-radius: 5px;
-      padding: 0.2em 0.8em;
+      padding: $padding;
       @include labels-font-style;
       font-size: $text-font-sm;
       line-height: $line-height-extra-sm;
@@ -137,6 +139,7 @@ body {
         .contact-form__body__row__field {
           border: none;
           @include align-flex-start;
+          width: 100%;
 
           .form-field__label {
             @include labels-font-style;
@@ -154,11 +157,15 @@ body {
             border-color: $input-focus-border;
             @include input-view;
           }
-        }
 
-        .contact-form__body__row__field--full-width {
-          max-width: 100%;
+          .form-field__answer {
+            width: 100%;
+          }
         }
+      }
+
+      .contact-form__body__row--full {
+        width: 94%;
       }
     }
   }
