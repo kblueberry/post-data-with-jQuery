@@ -57,7 +57,7 @@ $padding: 0.4em 0.8em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 @mixin align-center {
@@ -76,12 +76,13 @@ body {
 }
 
 .contact-form {
-  @include align-center;
+  display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 5% 15%;
 
   .contact-form__info {
-    max-width: 55%;
-
     .contact-form__info__title {
       font-family: $secondary-font-family;
       font-size: $text-font-extra-lg;
@@ -98,18 +99,12 @@ body {
   }
 
   #main-content {
-    width: 60%;
-  }
-
-  .contact-form__body {
-    background: $white-primary-color;
-    border: 1px solid $grey-primary-color;
     position: relative;
 
     .contact-form__body__badge {
       @include align-center;
       position: absolute;
-      top: -2%;
+      top: -1em;
       left: 45%;
       background-color: $grey-minor-color;
       color: $grey-secondary-color;
@@ -125,6 +120,13 @@ body {
         opacity: 0.4;
       }
     }
+  }
+
+  .contact-form__body {
+    background: $white-primary-color;
+    border: 1px solid $grey-primary-color;
+    display: flex;
+    flex-direction: column;
 
     .contact-form__body__inputs {
       @include align-flex-start;
@@ -133,6 +135,7 @@ body {
         border: none;
         background: none;
         @include align-center;
+        align-self: flex-start;
         font-family: $secondary-font-family;
         font-style: normal;
         font-weight: 600;
@@ -149,12 +152,10 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
 
         .contact-form__body__row__field {
           border: none;
           @include align-flex-start;
-          width: 100%;
 
           .form-field__label {
             @include labels-font-style;
@@ -165,7 +166,6 @@ body {
           .form-field__input {
             border-color: $input-border;
             @include input-view;
-            width: 100%;
           }
 
           .form-field__input:focus {
@@ -175,7 +175,7 @@ body {
           }
 
           .form-field__answer {
-            width: 100%;
+            // width: 100%;
           }
 
           .form-field__textarea {
@@ -187,7 +187,9 @@ body {
       }
 
       .contact-form__body__row--full {
-        width: 96%;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
       }
 
       .contact-form__body__upload {
@@ -208,16 +210,20 @@ body {
 
         .contact-form__body__upload__button {
           color: $red-primary-color;
+          font-weight: bold;
+          font-size: $text-font-sm;
+          font-family: $secondary-font-family;
+          line-height: 16px;
           border-radius: 20px;
           border: none;
-          padding: 0.8em;
+          padding: 0.8em 1em;
         }
       }
     }
 
-    .contact-form__body__inputs--hidden {
-      display: none;
-    }
+    // .contact-form__body__inputs--hidden {
+    //   display: none;
+    // }
   }
 }
 
@@ -235,6 +241,10 @@ body {
     }
   }
 
+  .actions__button--hidden {
+    display: none;
+  }
+
   .actions__button__back {
     padding: $padding;
     background: none;
@@ -248,5 +258,17 @@ body {
     background: $yellow-primary-color;
     color: $yellow-minor-color;
     @include align-center;
+  }
+
+  .actions__button__submit {
+    border-radius: 30px;
+    border: none;
+    padding: 0.8em 2em;
+    background: $red-primary-color;
+    color: $white-primary-color;
+    font-weight: bold;
+    font-size: $text-font-md;
+    font-family: $secondary-font-family;
+    line-height: 19px;
   }
 }
