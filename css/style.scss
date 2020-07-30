@@ -17,6 +17,9 @@ $grey-primary-color: #ecedef;
 $grey-secondary-color: #79879b;
 $grey-minor-color: #f0f0f0;
 $red-primary-color: #eb6a58;
+$yellow-primary-color: rgba(255, 232, 182, 0.6);
+$yellow-secondary-color: #fcc234;
+$yellow-minor-color: #a17601;
 
 $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
@@ -60,6 +63,10 @@ $padding: 0.4em 0.8em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin button-margins {
+  margin: 0 0.4em 0 0;
 }
 
 body {
@@ -130,7 +137,7 @@ body {
         padding: 1em;
 
         .contact-form__body__tooltip__icon {
-          margin: 0 0.4em 0 0;
+          @include button-margins;
         }
       }
 
@@ -186,7 +193,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // width: 100%;
 
         .contact-form__body__upload__info {
           margin-left: 1em;
@@ -204,5 +210,23 @@ body {
         }
       }
     }
+
+    .contact-form__body__inputs--hidden {
+      display: none;
+    }
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  padding: $padding;
+  background: $yellow-primary-color;
+  border: 2px solid $yellow-secondary-color;
+  border-radius: 4px;
+  color: $yellow-minor-color;
+
+  .action__icon {
+    @include button-margins;
   }
 }
