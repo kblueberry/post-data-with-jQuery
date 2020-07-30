@@ -50,6 +50,7 @@ $description-font-family: 'Cabin';
       align-items: center;
 
       .contact-form__body__row__field {
+        border: none;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
