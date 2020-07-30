@@ -16,6 +16,7 @@ $input-focus-border: #adc5dd;
 $grey-primary-color: #ecedef;
 $grey-secondary-color: #79879b;
 $grey-minor-color: #f0f0f0;
+$red-primary-color: #eb6a58;
 
 $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
@@ -176,6 +177,31 @@ body {
 
       .contact-form__body__row--full {
         width: 96%;
+      }
+
+      .contact-form__body__upload {
+        font-family: $primary-font-family;
+        font-size: $text-font-md;
+        line-height: $line-height-sm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // width: 100%;
+
+        .contact-form__body__upload__info {
+          margin-left: 1em;
+
+          .contact-form__body__upload__info--valid {
+            opacity: 0.5;
+          }
+        }
+
+        .contact-form__body__upload__button {
+          color: $red-primary-color;
+          border-radius: 20px;
+          border: none;
+          padding: 0.8em;
+        }
       }
     }
   }

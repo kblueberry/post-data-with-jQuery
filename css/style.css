@@ -113,3 +113,19 @@ body {
             font-family: "Cabin"; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row--full {
         width: 96%; }
+      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload {
+        font-family: "Cabin";
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload .contact-form__body__upload__info {
+          margin-left: 1em; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload .contact-form__body__upload__info .contact-form__body__upload__info--valid {
+            opacity: 0.5; }
+        .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload .contact-form__body__upload__button {
+          color: #eb6a58;
+          border-radius: 20px;
+          border: none;
+          padding: 0.8em; }
