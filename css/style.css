@@ -132,13 +132,26 @@ body {
     .contact-form .contact-form__body .contact-form__body__inputs--hidden {
       display: none; }
 
-.action {
+.actions {
   display: flex;
-  align-items: center;
-  padding: 0.4em 0.8em;
-  background: rgba(255, 232, 182, 0.6);
-  border: 2px solid #fcc234;
-  border-radius: 4px;
-  color: #a17601; }
-  .action .action__icon {
-    margin: 0 0.4em 0 0; }
+  justify-content: center;
+  align-items: center; }
+  .actions .actions__button {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .actions .actions__button .actions__button__icon {
+      margin: 0 0.4em 0 0; }
+  .actions .actions__button__back {
+    padding: 0.4em 0.8em;
+    background: none;
+    border: none; }
+  .actions .actions__button__next {
+    border: 2px solid #fcc234;
+    border-radius: 4px;
+    padding: 0.4em 0.8em;
+    background: rgba(255, 232, 182, 0.6);
+    color: #a17601;
+    display: flex;
+    justify-content: center;
+    align-items: center; }

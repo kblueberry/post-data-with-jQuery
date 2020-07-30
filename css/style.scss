@@ -20,6 +20,7 @@ $red-primary-color: #eb6a58;
 $yellow-primary-color: rgba(255, 232, 182, 0.6);
 $yellow-secondary-color: #fcc234;
 $yellow-minor-color: #a17601;
+$grey-color: #58667c;
 
 $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
@@ -68,6 +69,13 @@ $padding: 0.4em 0.8em;
 @mixin button-margins {
   margin: 0 0.4em 0 0;
 }
+
+// @mixin action-button-style {
+//   border-width: 2px;
+//   border-style: solid;
+//   @include align-center;
+//   border-radius: 4px;
+// }
 
 body {
   background-color: $body-background-color;
@@ -217,16 +225,29 @@ body {
   }
 }
 
-.action {
-  display: flex;
-  align-items: center;
-  padding: $padding;
-  background: $yellow-primary-color;
-  border: 2px solid $yellow-secondary-color;
-  border-radius: 4px;
-  color: $yellow-minor-color;
+.actions {
+  @include align-center();
 
-  .action__icon {
-    @include button-margins;
+  .actions__button {
+    @include align-center;
+
+    .actions__button__icon {
+      @include button-margins;
+    }
+  }
+
+  .actions__button__back {
+    padding: $padding;
+    background: none;
+    border: none;
+  }
+
+  .actions__button__next {
+    border: 2px solid $yellow-secondary-color;
+    border-radius: 4px;
+    padding: $padding;
+    background: $yellow-primary-color;
+    color: $yellow-minor-color;
+    @include align-center;
   }
 }
