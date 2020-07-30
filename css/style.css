@@ -7,13 +7,12 @@ body {
   justify-content: center;
   align-items: center; }
   .contact-form .contact-form__info {
-    max-width: 80%; }
+    max-width: 55%; }
     .contact-form .contact-form__info .contact-form__info__title {
       font-family: "Raleway";
       font-size: 24px;
       text-align: center; }
     .contact-form .contact-form__info .contact-form__info__description {
-      display: block;
       text-align: center;
       font-family: "Cabin";
       font-size: 16px; }

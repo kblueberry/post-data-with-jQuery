@@ -29,7 +29,7 @@ body {
   align-items: center;
 
   .contact-form__info {
-    max-width: 80%;
+    max-width: 55%;
 
     .contact-form__info__title {
       font-family: $title-font-family;
@@ -38,7 +38,6 @@ body {
     }
 
     .contact-form__info__description {
-      display: block;
       text-align: center;
       font-family: $description-font-family;
       font-size: $description-font-size;
