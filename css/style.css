@@ -1,16 +1,40 @@
-#main-content {
+.contact-form {
   background-color: #faf9f8;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
-  #main-content #contact-form {
-    max-width: 60%;
-    color: #3e434c; }
-    #main-content #contact-form .contact-form__title {
+  .contact-form .contact-form__info {
+    max-width: 80%; }
+    .contact-form .contact-form__info .contact-form__info__title {
       font-family: "Raleway";
       font-size: 24px;
       text-align: center; }
-    #main-content #contact-form .contact-form__description {
+    .contact-form .contact-form__info .contact-form__info__description {
+      display: block;
+      text-align: center;
       font-family: "Cabin";
-      font-size: 16px;
-      text-align: center; }
+      font-size: 16px; }
+  .contact-form .contact-form__body {
+    color: #3e434c; }
+    .contact-form .contact-form__body .contact-form__body__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .contact-form .contact-form__body .contact-form__body__row .contact-form__body__row__field {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; }
+        .contact-form .contact-form__body .contact-form__body__row .contact-form__body__row__field #form-field__label {
+          border-color: #f1f2f3;
+          background: #ffffff;
+          border-width: 2px;
+          border-style: solid;
+          border-radius: 2px; }
+        .contact-form .contact-form__body .contact-form__body__row .contact-form__body__row__field #form-field__label:focus {
+          border-color: #adc5dd;
+          background: #ffffff;
+          border-width: 2px;
+          border-style: solid;
+          border-radius: 2px; }

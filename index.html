@@ -8,56 +8,61 @@
     <script src="js/script.js"></script>
   </head>
   <body>
-    <main id="main-content">
-      <form
-        id="contact-form"
-        class="contact-form"
-        action="https://my-json-server.typicode.com"
-        method="post"
-      >
-        <h3 class="contact-form__title">Lorem Ipsum</h3>
-        <p class="contact-form__description">
+    <main class="contact-form">
+      <div class="contact-form__info">
+        <h3 class="contact-form__info__title">Lorem Ipsum</h3>
+        <p class="contact-form__info__description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <fieldset class="contact-form__field">
-          <label for="contact-form__field__label">Phone</label>
-          <input
-            id="contact-form__field__input"
-            type="tel"
-            name="personal-detail"
-            placeholder="1 939 283 294"
-          />
-        </fieldset>
-        <fieldset class="contact-form__field">
-          <label for="contact-form__field__label">Phone</label>
-          <input
-            id="contact-form__field__input"
-            type="text"
-            name="personal-detail"
-            placeholder="Your State"
-          />
-        </fieldset>
-        <fieldset class="contact-form__field">
-          <label for="contact-form__field__label">My Name</label>
-          <input
-            id="contact-form__field__input"
-            type="text"
-            name="personal-detail"
-            placeholder="Your Name"
-          />
-        </fieldset>
-        <fieldset class="contact-form__field">
-          <label for="contact-form__field__label">My Country</label>
-          <input
-            id="contact-form__field__input"
-            type="text"
-            name="personal-detail"
-            placeholder="Your Country"
-          />
-        </fieldset>
+      </div>
+      <form
+        class="contact-form__body"
+        action="https://my-json-server.typicode.com"
+        method="post"
+      >
+        <div class="contact-form__body__row">
+          <fieldset class="contact-form__body__row__field">
+            <label for="form-field__label">Phone</label>
+            <input
+              id="form-field__label"
+              type="tel"
+              name="phone"
+              placeholder="+1 939 283 294"
+            />
+          </fieldset>
+          <fieldset class="contact-form__body__row__field">
+            <label for="form-field__label">Phone</label>
+            <input
+              id="form-field__label"
+              type="text"
+              name="city"
+              placeholder="Your State"
+            />
+          </fieldset>
+        </div>
+        <div class="contact-form__body__row">
+          <fieldset class="contact-form__body__row__field">
+            <label for="form-field__label">My Name</label>
+            <input
+              id="form-field__label"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+            />
+          </fieldset>
+          <fieldset class="contact-form__body__row__field">
+            <label for="form-field__label">My Country</label>
+            <input
+              id="form-field__label"
+              type="text"
+              name="country"
+              placeholder="Your Country"
+            />
+          </fieldset>
+        </div>
       </form>
     </main>
   </body>
