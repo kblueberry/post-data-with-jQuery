@@ -20,6 +20,7 @@ $description-font-family: 'Cabin';
 
 body {
   background-color: $background-color;
+  color: $text-color;
 }
 
 .contact-form {
@@ -45,7 +46,6 @@ body {
   }
 
   .contact-form__body {
-    color: $text-color;
     background: $white-background-color;
     border: 1px solid $form-border-color;
 

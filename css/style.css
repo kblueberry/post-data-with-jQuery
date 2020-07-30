@@ -1,5 +1,6 @@
 body {
-  background-color: #faf9f8; }
+  background-color: #faf9f8;
+  color: #3e434c; }
 
 .contact-form {
   display: flex;
@@ -17,7 +18,6 @@ body {
       font-family: "Cabin";
       font-size: 16px; }
   .contact-form .contact-form__body {
-    color: #3e434c;
     background: #ffffff;
     border: 1px solid #ecedef; }
     .contact-form .contact-form__body .contact-form__body__row {
