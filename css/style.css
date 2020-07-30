@@ -16,7 +16,9 @@
       font-family: "Cabin";
       font-size: 16px; }
   .contact-form .contact-form__body {
-    color: #3e434c; }
+    color: #3e434c;
+    background: #ffffff;
+    border: 1px solid #ecedef; }
     .contact-form .contact-form__body .contact-form__body__row {
       display: flex;
       justify-content: space-between;

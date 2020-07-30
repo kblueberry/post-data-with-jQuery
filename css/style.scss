@@ -3,15 +3,16 @@ $description-font-size: 16px;
 
 $background-color: #faf9f8;
 $text-color: #3e434c;
-$input-color: #ffffff;
+$white-background-color: #ffffff;
 $input-border: #f1f2f3;
 $input-focus-border: #adc5dd;
+$form-border-color: #ecedef;
 
 $title-font-family: 'Raleway';
 $description-font-family: 'Cabin';
 
 @mixin input-view {
-  background: $input-color;
+  background: $white-background-color;
   border-width: 2px;
   border-style: solid;
   border-radius: 2px;
@@ -43,6 +44,8 @@ $description-font-family: 'Cabin';
 
   .contact-form__body {
     color: $text-color;
+    background: $white-background-color;
+    border: 1px solid $form-border-color;
 
     .contact-form__body__row {
       display: flex;
