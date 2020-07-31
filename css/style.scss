@@ -184,18 +184,23 @@ body {
             @include input-view;
           }
 
+          .form-field__invalid-message {
+            font-family: $primary-font-family;
+            color: $red-primary-color;
+            font-size: 12px;
+            line-height: 15px;
+          }
+
+          .form-field__invalid-message--hidden {
+            display: none;
+          }
+
           .form-field__textarea {
             outline: none;
             resize: none;
             font-family: $primary-font-family;
           }
         }
-      }
-
-      .contact-form__body__row--full {
-        display: flex;
-        justify-content: stretch;
-        align-items: center;
       }
 
       .contact-form__body__upload {

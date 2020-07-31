@@ -109,14 +109,17 @@ body {
             border-radius: 2px;
             padding: 0.4em 0.8em;
             margin: 0.2em 0; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__invalid-message {
+            font-family: "Cabin";
+            color: #eb6a58;
+            font-size: 12px;
+            line-height: 15px; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__invalid-message--hidden {
+            display: none; }
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__textarea {
             outline: none;
             resize: none;
             font-family: "Cabin"; }
-      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row--full {
-        display: flex;
-        justify-content: stretch;
-        align-items: center; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload {
         font-family: "Cabin";
         font-size: 16px;
