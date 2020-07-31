@@ -16,8 +16,8 @@ $input-focus-border: #adc5dd;
 $grey-primary-color: #ecedef;
 $grey-secondary-color: #79879b;
 $grey-minor-color: #f0f0f0;
-$grey-minor-3-color: #58667c;
 $grey-minor-2-color: #5e728d;
+$grey-minor-3-color: #58667c;
 $red-primary-color: #eb6a58;
 $red-secondary-color: #ef806e;
 $yellow-primary-color: rgba(255, 232, 182, 0.6);
@@ -76,6 +76,14 @@ $padding: 0.4em 0.8em;
 body {
   background-color: $body-background-color;
   color: $text-color;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button--hidden {
+  display: none;
 }
 
 .contact-form {
@@ -203,6 +211,13 @@ body {
         }
       }
 
+      #file-upload-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+      }
+
       .contact-form__body__upload {
         font-family: $primary-font-family;
         font-size: $text-font-md;
@@ -230,10 +245,26 @@ body {
           padding: 0.8em 1em;
         }
       }
-    }
 
-    .contact-form__body__inputs--hidden {
-      display: none;
+      .attached {
+        font-family: $primary-font-family;
+        font-size: $text-font-sm;
+        line-height: $line-height-lg;
+
+        .attached__name {
+          color: $red-primary-color;
+          text-decoration: underline;
+          text-decoration-color: $red-primary-color;
+        }
+
+        .attached__info {
+          color: $grey-secondary-color;
+        }
+      }
+
+      .contact-form__body__inputs--hidden {
+        display: none;
+      }
     }
   }
 }

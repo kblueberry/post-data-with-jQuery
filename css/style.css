@@ -8,6 +8,12 @@ body {
   background-color: #faf9f8;
   color: #3e434c; }
 
+button:focus {
+  outline: none; }
+
+.button--hidden {
+  display: none; }
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -120,6 +126,11 @@ body {
             outline: none;
             resize: none;
             font-family: "Cabin"; }
+      .contact-form .contact-form__body .contact-form__body__inputs #file-upload-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload {
         font-family: "Cabin";
         font-size: 16px;
@@ -140,8 +151,18 @@ body {
           border-radius: 20px;
           border: none;
           padding: 0.8em 1em; }
-    .contact-form .contact-form__body .contact-form__body__inputs--hidden {
-      display: none; }
+      .contact-form .contact-form__body .contact-form__body__inputs .attached {
+        font-family: "Cabin";
+        font-size: 14px;
+        line-height: 24px; }
+        .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__name {
+          color: #eb6a58;
+          text-decoration: underline;
+          text-decoration-color: #eb6a58; }
+        .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__info {
+          color: #79879b; }
+      .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__inputs--hidden {
+        display: none; }
 
 .actions {
   margin: 2em 0;

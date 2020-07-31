@@ -43,7 +43,7 @@
                 class="contact-form__body"
                 action="javascript:void(0);"
             >
-                <div class="contact-form__body__inputs--first-page">
+                <div class="contact-form__body__inputs--first-page" id="form-first-page">
                     <div class="contact-form__body__inputs">
                         <button class="contact-form__body__tooltip">
                             <img
@@ -214,7 +214,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form__body__inputs contact-form__body__inputs--second-page">
+                <div class="contact-form__body__inputs contact-form__body__inputs--second-page" id="form-second-page">
                     <button class="contact-form__body__tooltip">
                         <img
                             class="contact-form__body__tooltip__icon"
@@ -244,7 +244,9 @@
                         </fieldset>
                     </div>
 
-                    <div class="contact-form__body__upload">
+                    <!-- <div id="file-upload-wrapper"> -->
+
+                    <div class="contact-form__body__upload" id="file-upload-info">
                         <p class="contact-form__body__upload__info">
                             <span class="contact-form__body__upload__info--advise">
                                 Or upload them in a separate file
@@ -255,7 +257,10 @@
                             </span>
                         </p>
 
-                        <button class="contact-form__body__upload__button">
+                        <button
+                            class="contact-form__body__upload__button"
+                            id="upload-button"
+                        >
                             <img
                                 src="./images/icons/add.svg"
                                 alt="add-icon"
@@ -264,7 +269,41 @@
 
                             Upload File
                         </button>
+
+                        <input
+                            type="file"
+                            name="upload"
+                            id="input-upload"
+                            class="button--hidden"
+                        ></input>
                     </div>
+
+                    <div
+                        class="contact-form__body__upload--attached attached"
+                        id="attached-files"
+                    >
+                        <img
+                            src="./images/icons/attachment.svg"
+                            alt="attachment-icon"
+                            class="icon__attachment"
+                        >
+
+                        <span class="attached__name">File name</span>
+
+                        <span class="attached__info">File info</span>
+
+                        <a
+                            href=""
+                            class="icon__close"
+                        >
+                            <img
+                                src="./images/icons/close.svg"
+                                alt="close-icon"
+                            >
+                        </a>
+                    </div>
+
+                    <!-- </div> -->
                 </div>
             </form>
 

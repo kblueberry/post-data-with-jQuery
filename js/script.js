@@ -1,19 +1,16 @@
 $(document).ready(function () {
-  $('.contact-form__body__inputs--second-page').addClass(
-    'contact-form__body__inputs--hidden'
-  );
+  $('#form-second-page').css('display', 'none');
 
   $('.actions__button__submit').addClass('actions__button--hidden');
 
   $('.actions__button__back').css('visibility', 'hidden');
 
+  $('#file-upload-info').css('display', '');
+
   $('.actions__button__next').click(function () {
-    $('.contact-form__body__inputs--second-page').removeClass(
-      'contact-form__body__inputs--hidden'
-    );
-    $('.contact-form__body__inputs--first-page').addClass(
-      'contact-form__body__inputs--hidden'
-    );
+    $('#form-second-page').css('display', '');
+
+    $('#form-first-page').css('display', 'none');
 
     $('.contact-form__body__badge--current').text(function () {
       return 'Block 2';
@@ -29,12 +26,9 @@ $(document).ready(function () {
   });
 
   $('.actions__button__back').click(function () {
-    $('.contact-form__body__inputs--second-page').addClass(
-      'contact-form__body__inputs--hidden'
-    );
-    $('.contact-form__body__inputs--first-page').removeClass(
-      'contact-form__body__inputs--hidden'
-    );
+    $('#form-second-page').css('display', 'none');
+
+    $('#form-first-page').css('display', '');
 
     $('.actions__button__submit').addClass('actions__button--hidden');
 
@@ -46,6 +40,19 @@ $(document).ready(function () {
   //   requiredInputs.push(requiredCity);
   //   requiredInputs.push(requiredName);
   //   requiredInputs.push(requiredCountry);
+
+  $('#upload-button').click(function () {
+    $('#input-upload').click();
+  });
+
+  $('#input-upload').bind('change', function () {
+    //this.files[0].size gets the size of your file.
+    alert(this.files[0].size);
+  });
+
+  $('#input-upload').change(function () {
+    $('#file-upload-info').css('display', 'none');
+  });
 });
 
 function validate() {
