@@ -7,6 +7,8 @@ $(document).ready(function () {
 
   $('#file-upload-info').css('display', '');
 
+  $('#attached-files').css('display', 'none');
+
   $('.actions__button__next').click(function () {
     $('#form-second-page').css('display', '');
 
@@ -57,6 +59,7 @@ $(document).ready(function () {
   });
 
   $('#input-upload').change(function () {
+    $('#attached-files').css('display', '');
     $('#file-upload-info').css('display', 'none');
   });
 });
