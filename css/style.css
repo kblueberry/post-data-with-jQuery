@@ -137,6 +137,8 @@ body {
           border-radius: 20px;
           border: none;
           padding: 0.8em 1em; }
+    .contact-form .contact-form__body .contact-form__body__inputs--hidden {
+      display: none; }
 
 .actions {
   margin: 2em 0;
