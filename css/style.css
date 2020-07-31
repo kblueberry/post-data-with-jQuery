@@ -156,7 +156,10 @@ body {
   .actions .actions__button__back {
     padding: 0.4em 0.8em;
     background: none;
-    border: none; }
+    border: none;
+    color: #5e728d;
+    font-size: 16px;
+    line-height: 24px; }
   .actions .actions__button__back:hover {
     color: #eb6a58; }
   .actions .actions__button__icon:hover {
