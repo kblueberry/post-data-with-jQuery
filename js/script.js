@@ -33,6 +33,12 @@ $(document).ready(function () {
     $('.actions__button__submit').addClass('actions__button--hidden');
 
     $('.actions__button__next').css('visibility', '');
+
+    $('.actions__button__back').css('visibility', 'hidden');
+
+    $('.contact-form__body__badge--current').text(function () {
+      return 'Block 1';
+    });
   });
 
   //   let requiredInputs = [];
