@@ -155,6 +155,10 @@ body {
     padding: 0.4em 0.8em;
     background: none;
     border: none; }
+  .actions .actions__button__back:hover {
+    color: #eb6a58; }
+  .actions .actions__button__icon:hover {
+    fill: #eb6a58; }
   .actions .actions__button__next {
     border: 2px solid #fcc234;
     border-radius: 4px;
@@ -164,6 +168,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .actions .actions__button__next:hover {
+    background: #ffe8b6; }
   .actions .actions__button__submit {
     border-radius: 30px;
     border: none;
@@ -174,6 +180,9 @@ body {
     font-size: 16px;
     font-family: "Raleway";
     line-height: 19px; }
+  .actions .actions__button__submit:hover {
+    background: #ef806e;
+    opacity: 0.9; }
 
 @media only screen and (max-width: 600px) {
   .contact-form {

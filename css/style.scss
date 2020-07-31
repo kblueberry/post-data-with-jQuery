@@ -21,6 +21,8 @@ $yellow-primary-color: rgba(255, 232, 182, 0.6);
 $yellow-secondary-color: #fcc234;
 $yellow-minor-color: #a17601;
 $grey-color: #58667c;
+$yellow-hover-color: #ffe8b6;
+$red-secondary-color: #ef806e;
 
 $secondary-font-family: 'Raleway';
 $primary-font-family: 'Cabin';
@@ -250,6 +252,14 @@ body {
     border: none;
   }
 
+  .actions__button__back:hover {
+    color: $red-primary-color;
+  }
+
+  .actions__button__icon:hover {
+    fill: $red-primary-color;
+  }
+
   .actions__button__next {
     border: 2px solid $yellow-secondary-color;
     border-radius: 4px;
@@ -257,6 +267,10 @@ body {
     background: $yellow-primary-color;
     color: $yellow-minor-color;
     @include align-center;
+  }
+
+  .actions__button__next:hover {
+    background: $yellow-hover-color;
   }
 
   .actions__button__submit {
@@ -269,6 +283,11 @@ body {
     font-size: $text-font-md;
     font-family: $secondary-font-family;
     line-height: 19px;
+  }
+
+  .actions__button__submit:hover {
+    background: $red-secondary-color;
+    opacity: 0.9;
   }
 }
 
