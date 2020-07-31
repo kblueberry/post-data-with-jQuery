@@ -150,17 +150,29 @@ button:focus {
           line-height: 16px;
           border-radius: 20px;
           border: none;
-          padding: 0.8em 1em; }
+          padding: 0.8em 1em;
+          cursor: pointer; }
       .contact-form .contact-form__body .contact-form__body__inputs .attached {
-        font-family: "Cabin";
-        font-size: 14px;
-        line-height: 24px; }
-        .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__name {
-          color: #eb6a58;
-          text-decoration: underline;
-          text-decoration-color: #eb6a58; }
-        .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__info {
-          color: #79879b; }
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline; }
+        .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__wrapper {
+          padding-left: 0.3em;
+          padding-right: 0.3em;
+          font-family: "Cabin";
+          display: flex;
+          flex-direction: column; }
+          .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__wrapper .attached__name {
+            font-size: 14px;
+            line-height: 24px;
+            color: #eb6a58;
+            text-decoration: underline;
+            text-decoration-color: #eb6a58; }
+          .contact-form .contact-form__body .contact-form__body__inputs .attached .attached__wrapper .attached__info {
+            font-size: 12px;
+            line-height: 24px;
+            color: #79879b;
+            display: block; }
       .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__inputs--hidden {
         display: none; }
 
@@ -172,7 +184,8 @@ button:focus {
   .actions .actions__button {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
     .actions .actions__button .actions__button__icon {
       margin: 0 0.4em 0 0; }
   .actions .actions__button--hidden {

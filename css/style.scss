@@ -243,25 +243,36 @@ button:focus {
           border-radius: 20px;
           border: none;
           padding: 0.8em 1em;
+          cursor: pointer;
         }
       }
 
       .attached {
-        font-family: $primary-font-family;
-        font-size: $text-font-sm;
-        line-height: $line-height-lg;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
 
-        .attached__name {
-          color: $red-primary-color;
-          text-decoration: underline;
-          text-decoration-color: $red-primary-color;
-        }
+        .attached__wrapper {
+          padding-left: 0.3em;
+          padding-right: 0.3em;
+          font-family: $primary-font-family;
+          display: flex;
+          flex-direction: column;
 
-        .attached__info {
-          color: $grey-secondary-color;
-        }
+          .attached__name {
+            font-size: $text-font-sm;
+            line-height: $line-height-lg;
+            color: $red-primary-color;
+            text-decoration: underline;
+            text-decoration-color: $red-primary-color;
+          }
 
-        #attached-files__close {
+          .attached__info {
+            font-size: 12px;
+            line-height: $line-height-lg;
+            color: $grey-secondary-color;
+            display: block;
+          }
         }
       }
 
@@ -280,6 +291,7 @@ button:focus {
 
   .actions__button {
     @include align-center;
+    cursor: pointer;
 
     .actions__button__icon {
       @include button-margins;
