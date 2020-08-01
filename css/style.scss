@@ -245,6 +245,7 @@ button:focus {
           border: none;
           padding: 0.8em 1em;
           cursor: pointer;
+          margin-right: 1em;
         }
       }
 
@@ -252,6 +253,7 @@ button:focus {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
+        margin-left: 1em;
 
         .attached__wrapper {
           padding-left: 0.3em;
