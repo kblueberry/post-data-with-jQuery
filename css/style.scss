@@ -197,14 +197,12 @@ input[data-error] {
             @include input-view;
           }
 
-          .form-field__invalid-message {
+          .form-field__invalid-message--required,
+          .form-field__invalid-message--phone-format {
             font-family: $primary-font-family;
             color: $red-primary-color;
             font-size: 12px;
             line-height: 15px;
-          }
-
-          .form-field__invalid-message--hidden {
             display: none;
           }
 
@@ -212,6 +210,15 @@ input[data-error] {
             outline: none;
             resize: none;
             font-family: $primary-font-family;
+          }
+
+          .form-field__input[data-error='required']
+            + .form-field__invalid-message--required {
+            display: inline-block;
+          }
+          .form-field__input[data-error='pattern']
+            ~ .form-field__invalid-message--phone-format {
+            display: inline-block;
           }
         }
       }

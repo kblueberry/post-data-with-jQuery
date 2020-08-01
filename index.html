@@ -66,15 +66,13 @@
 
                                 <input
                                     id="input-phone"
-                                    class="form-field__input"
+                                    class="form-field__input form-field__input"
                                     type="tel"
                                     name="phone"
                                     placeholder="+1 939 283 294"
                                 ></input>
-
-                                <p class="form-field__invalid-message form-field__invalid-message--hidden">
-                                    Number must start with '+' and contain numbers [0-9]
-                                </p>
+                                <p class="form-field__invalid-message--required">This field is required</p>
+                                <p class="form-field__invalid-message--phone-format">This field must start with + and contain only numbers</p>
                             </fieldset>
 
                             <fieldset class="contact-form__body__row__field">
@@ -91,7 +89,7 @@
                                     placeholder="Your State"
                                 ></input>
 
-                                <p class="form-field__invalid-message form-field__invalid-message--hidden">This field is required</p>
+                                <p class="form-field__invalid-message--required">This field is required</p>
                             </fieldset>
                         </div>
 
@@ -110,7 +108,7 @@
                                     placeholder="Your Name"
                                 ></input>
 
-                                <p class="form-field__invalid-message form-field__invalid-message--hidden">This field is required</p>
+                                <p class="form-field__invalid-message--required">This field is required</p>
                             </fieldset>
 
                             <fieldset class="contact-form__body__row__field">
@@ -127,7 +125,7 @@
                                     placeholder="Your Country"
                                 ></input>
 
-                                <p class="form-field__invalid-message form-field__invalid-message--hidden">This field is required</p>
+                                <p class="form-field__invalid-message--required">This field is required</p>
                             </fieldset>
                         </div>
                     </div>

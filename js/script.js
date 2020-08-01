@@ -1,3 +1,5 @@
+const PHONE_PATTERN = /^\+\d+$/;
+
 $(document).ready(function () {
   $('#form-second-page').css('display', 'none');
 
@@ -10,6 +12,10 @@ $(document).ready(function () {
   $('#attached-files').css('display', 'none');
 
   $('.actions__button__next').click(function () {
+    if (isFirstPageInvalid()) {
+      return;
+    }
+
     $('#form-second-page').css('display', '');
 
     $('#form-first-page').css('display', 'none');
@@ -23,8 +29,6 @@ $(document).ready(function () {
     $('.actions__button__next').css('visibility', 'hidden');
 
     $('.actions__button__back').css('visibility', '');
-
-    validate();
   });
 
   $('.actions__button__back').click(function () {
@@ -41,10 +45,16 @@ $(document).ready(function () {
     $('.contact-form__body__badge--current').text('Block 1');
   });
 
-  registerRequiredValidator($('#input-phone'));
   registerRequiredValidator($('#input-city'));
   registerRequiredValidator($('#input-name'));
   registerRequiredValidator($('#input-country'));
+
+  const phoneInput = $('#input-phone');
+  phoneInput.blur(function () {
+    if (validateIsRequired(phoneInput)) {
+      validatePattern(phoneInput, PHONE_PATTERN);
+    }
+  });
 
   $('#upload-button').click(function () {
     $('#input-upload').click();
@@ -74,8 +84,19 @@ $(document).ready(function () {
 function validateIsRequired(element) {
   if (element.val()) {
     element.removeAttr('data-error');
+    return true;
   } else {
     element.attr('data-error', 'required');
+    return false;
+  }
+}
+
+function validatePattern(element, pattern) {
+  const value = element.val();
+  if (pattern.test(value)) {
+    element.removeAttr('data-error');
+  } else {
+    element.attr('data-error', 'pattern');
   }
 }
 
@@ -84,9 +105,6 @@ function registerRequiredValidator(element) {
     validateIsRequired(element);
   });
 }
-
-// let validationMessage = $('.form-field__invalid-message');
-// validationMessage.removeClass('form-field__invalid-message--hidden');
 
 function formatSize(sizeBytes) {
   const bytesInMb = 1024 * 1024;
@@ -109,4 +127,21 @@ function formatDate(epoch) {
     month: 'short',
     year: 'numeric',
   });
+}
+
+function isFirstPageInvalid() {
+  validateIsRequired($('#input-city'));
+  validateIsRequired($('#input-name'));
+  validateIsRequired($('#input-country'));
+  const phoneInput = $('#input-phone');
+  if (validateIsRequired(phoneInput)) {
+    validatePattern(phoneInput, PHONE_PATTERN);
+  }
+
+  return (
+    $('#input-city').attr('data-error') ||
+    $('#input-name').attr('data-error') ||
+    $('#input-country').attr('data-error') ||
+    $('#input-phone').attr('data-error')
+  );
 }

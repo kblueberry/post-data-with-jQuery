@@ -119,17 +119,23 @@ input[data-error] {
             border-radius: 2px;
             padding: 0.4em 0.8em;
             margin: 0.2em 0; }
-          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__invalid-message {
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__invalid-message--required,
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__invalid-message--phone-format {
             font-family: "Cabin";
             color: #eb6a58;
             font-size: 12px;
-            line-height: 15px; }
-          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__invalid-message--hidden {
+            line-height: 15px;
             display: none; }
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__textarea {
             outline: none;
             resize: none;
             font-family: "Cabin"; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__input[data-error='required']
+          + .form-field__invalid-message--required {
+            display: inline-block; }
+          .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__row .contact-form__body__row__field .form-field__input[data-error='pattern']
+          ~ .form-field__invalid-message--phone-format {
+            display: inline-block; }
       .contact-form .contact-form__body .contact-form__body__inputs #file-upload-wrapper {
         display: flex;
         flex-direction: column;
