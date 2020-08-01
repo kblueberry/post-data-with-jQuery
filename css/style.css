@@ -14,6 +14,10 @@ button:focus {
 .button--hidden {
   display: none; }
 
+input[data-error] {
+  border-color: #eb6a58 !important;
+  border-width: 2px !important; }
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -152,8 +156,8 @@ button:focus {
           border-radius: 20px;
           border: none;
           padding: 0.8em 1em;
-          cursor: pointer;
-          margin-right: 1em; }
+          margin-right: 1em;
+          cursor: pointer; }
       .contact-form .contact-form__body .contact-form__body__inputs .attached {
         display: flex;
         justify-content: flex-start;

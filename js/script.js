@@ -41,11 +41,10 @@ $(document).ready(function () {
     $('.contact-form__body__badge--current').text('Block 1');
   });
 
-  //   let requiredInputs = [];
-  //   requiredInputs.push(requiredPhone);
-  //   requiredInputs.push(requiredCity);
-  //   requiredInputs.push(requiredName);
-  //   requiredInputs.push(requiredCountry);
+  registerRequiredValidator($('#input-phone'));
+  registerRequiredValidator($('#input-city'));
+  registerRequiredValidator($('#input-name'));
+  registerRequiredValidator($('#input-country'));
 
   $('#upload-button').click(function () {
     $('#input-upload').click();
@@ -72,22 +71,22 @@ $(document).ready(function () {
   });
 });
 
-function validate() {
-  let requiredPhone = $(':input[name="phone"]');
-  let requiredCity = $(':input[name="city"]');
-  let requiredName = $(':input[name="name"]');
-  let requiredCountry = $(':input[name="country"]');
-
-  if (
-    requiredPhone === '' ||
-    requiredName === '' ||
-    requiredCountry === '' ||
-    requiredCity === ''
-  ) {
-    let validationMessage = $('.form-field__invalid-message');
-    validationMessage.removeClass('form-field__invalid-message--hidden');
+function validateIsRequired(element) {
+  if (element.val()) {
+    element.removeAttr('data-error');
+  } else {
+    element.attr('data-error', 'required');
   }
 }
+
+function registerRequiredValidator(element) {
+  element.blur(function () {
+    validateIsRequired(element);
+  });
+}
+
+// let validationMessage = $('.form-field__invalid-message');
+// validationMessage.removeClass('form-field__invalid-message--hidden');
 
 function formatSize(sizeBytes) {
   const bytesInMb = 1024 * 1024;
