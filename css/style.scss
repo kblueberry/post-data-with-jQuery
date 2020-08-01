@@ -225,6 +225,7 @@ button:focus {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
 
         .contact-form__body__upload__info {
           margin-left: 1em;

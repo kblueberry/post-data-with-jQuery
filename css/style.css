@@ -137,7 +137,8 @@ button:focus {
         line-height: 20px;
         display: flex;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        flex-wrap: wrap; }
         .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload .contact-form__body__upload__info {
           margin-left: 1em; }
           .contact-form .contact-form__body .contact-form__body__inputs .contact-form__body__upload .contact-form__body__upload__info .contact-form__body__upload__info--valid {
