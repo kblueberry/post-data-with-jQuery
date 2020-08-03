@@ -71,8 +71,12 @@
                                     name="phone"
                                     placeholder="+1 939 283 294"
                                 ></input>
+
                                 <p class="form-field__invalid-message--required">This field is required</p>
-                                <p class="form-field__invalid-message--phone-format">This field must start with + and contain only numbers</p>
+
+                                <p class="form-field__invalid-message--phone-format">
+                                    This field must start with + and contain only numbers
+                                </p>
                             </fieldset>
 
                             <fieldset class="contact-form__body__row__field">
@@ -143,6 +147,7 @@
                         <div class="contact-form__body__row">
                             <fieldset class="contact-form__body__row__field">
                                 <label
+                                    id="question-1-text"
                                     class="form-field__label"
                                     for="form-field__input"
                                 >
@@ -150,6 +155,7 @@
                                 </label>
 
                                 <input
+                                    id="question-1"
                                     class="form-field__input form-field__answer"
                                     type="text"
                                     name="answer"
@@ -161,6 +167,7 @@
                         <div class="contact-form__body__row">
                             <fieldset class="contact-form__body__row__field">
                                 <label
+                                    id="question-2-text"
                                     class="form-field__label"
                                     for="form-field__input"
                                 >
@@ -168,6 +175,7 @@
                                 </label>
 
                                 <input
+                                    id="question-2"
                                     class="form-field__input form-field__answer"
                                     type="text"
                                     name="answer"
@@ -179,6 +187,7 @@
                         <div class="contact-form__body__row">
                             <fieldset class="contact-form__body__row__field">
                                 <label
+                                    id="question-3-text"
                                     class="form-field__label"
                                     for="form-field__input"
                                 >
@@ -186,6 +195,7 @@
                                 </label>
 
                                 <input
+                                    id="question-3"
                                     class="form-field__input form-field__answer"
                                     type="text"
                                     name="answer"
@@ -197,6 +207,7 @@
                         <div class="contact-form__body__row">
                             <fieldset class="contact-form__body__row__field">
                                 <label
+                                    id="question-4-text"
                                     class="form-field__label"
                                     for="form-field__input"
                                 >
@@ -204,6 +215,7 @@
                                 </label>
 
                                 <input
+                                    id="question-4"
                                     class="form-field__input form-field__answer"
                                     type="text"
                                     name="answer"
@@ -343,7 +355,10 @@
                     Next
                 </button>
 
-                <button class="actions__button actions__button__submit">Submit form</button>
+                <button
+                    class="actions__button actions__button__submit"
+                    id="button-submit"
+                >Submit form</button>
             </div>
         </div>
     </main>

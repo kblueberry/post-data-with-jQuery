@@ -79,6 +79,60 @@ $(document).ready(function () {
     $('#file-upload-info').css('display', '');
     $('#input-upload').val(null);
   });
+
+  $('#button-submit').click(function () {
+    const file = $('#input-upload')[0].files[0];
+    const data = {
+      contactInfo: {
+        phone: $('#input-phone').val(),
+        city: $('#input-city').val(),
+        country: $('#input-country').val(),
+        name: $('#input-name').val(),
+      },
+      questions: [
+        {
+          question: $('#question-1-text').text().trim(),
+          answer: $('#question-1').val(),
+        },
+        {
+          question: $('#question-2-text').text().trim(),
+          answer: $('#question-2').val(),
+        },
+        {
+          question: $('#question-3-text').text().trim(),
+          answer: $('#question-3').val(),
+        },
+        {
+          question: $('#question-4-text').text().trim(),
+          answer: $('#question-4').val(),
+        },
+      ],
+      file: {
+        name: file.name,
+        format: getFileFormat(file.name),
+        size: file.size,
+      },
+    };
+
+    $.ajax({
+      type: 'POST',
+      url:
+        'https://my-json-server.typicode.com/victorkarpenko/form-fake-server/data',
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify(data),
+      success: function (data, textStatus, xhr) {
+        if (xhr.status === 200 || xhr.status === 201) {
+          alert(xhr.responseText);
+        } else {
+          alert('Failed to post data to server');
+        }
+      },
+      error: function () {
+        alert('Failed to post data to server');
+      },
+    });
+  });
 });
 
 function validateIsRequired(element) {
@@ -144,4 +198,13 @@ function isFirstPageInvalid() {
     $('#input-country').attr('data-error') ||
     $('#input-phone').attr('data-error')
   );
+}
+
+function getFileFormat(name) {
+  const lastDotIndex = name.lastIndexOf('.');
+  if (lastDotIndex === -1) {
+    return '';
+  }
+
+  return name.slice(lastDotIndex + 1);
 }
